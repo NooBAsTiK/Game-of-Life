@@ -1,9 +1,10 @@
 import pygame
 import random
 from interface import interface_object
+import config
 
 
-screen = pygame.display.set_mode((200, 200))
+screen = screen = pygame.display.set_mode((config.WINDOW_SIZE))
 class Triangle(interface_object.InterfaceObject):
     def __init__(self, position, size, color):
         super().__init__()

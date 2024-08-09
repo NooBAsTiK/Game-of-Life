@@ -4,9 +4,10 @@ from interface.button import Button
 from interface.label import Label
 from interface import interface_object
 from interface.crazy_triangle import Triangle
+import config
 
 pygame.init()
-screen = pygame.display.set_mode((200, 200))
+screen = pygame.display.set_mode((config.WINDOW_SIZE))
 clock = pygame.time.Clock()
 
 running = True
@@ -17,7 +18,9 @@ button2 = Button((80, 60), (100, 40), (255, 100, 100))
 
 label = Label(position=(10, 0), text="HELLO WORLD")
 
-triangle = Triangle(position=(100, 100), size=30, color=(0, 0, 255))
+triangle = Triangle(position=(100, 100), size=30, color=(random.randint(0, 255)
+                                                        , random.randint(0, 255),
+                                                         random.randint(0, 255)))
 
 
 def button2_func():
